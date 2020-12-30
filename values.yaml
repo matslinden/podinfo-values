@@ -1,0 +1,2 @@
+# default from the chart's values.yaml is 1
+replicaCount: 2
