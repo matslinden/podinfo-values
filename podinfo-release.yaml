@@ -1,0 +1,18 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: podinfo-release
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: podinfo
+      sourceRef:
+        kind: HelmRepository
+        name: podinfo-app
+  interval: 1m0s
+  valuesFrom:
+  - kind: ConfigMap
+    name: podinfo-values
+
