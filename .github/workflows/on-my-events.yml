@@ -14,8 +14,7 @@ on:
   workflow_dispatch:
 
   repository_dispatch:
-  # remove comment when only trigger
-#    types: [sync-success]
+    types: [sync-success]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
